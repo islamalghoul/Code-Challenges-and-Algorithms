@@ -10,17 +10,16 @@ class Node :
 
 class Linked_list:
    
-    counter=0
     def __init__(self):
         self.head=None
-       
+        self. counter=0
         
     def append(self,value):
         """
         this function for appending new nodes 
         """
         new_node=Node(value)
-        if Linked_list.counter==0:
+        if self.counter==0:
             self.head=new_node
         # if Linked_list.counter==1:
         #     pass
@@ -50,17 +49,22 @@ class Linked_list:
             current=current.next
         array.append(current.value)
         return array
-    def delete_node(self,node):
+    # def delete_node(self,node):
+    #     """
+    #     this function for deleting a node 
+    #     """
+    #     node.value=node.next.value
+    #     node.next=node.next.next
+    
+
+
+        
+def delete_node(node):
         """
         this function for deleting a node 
         """
         node.value=node.next.value
         node.next=node.next.next
-    
-
-
-        
-
 # first_node=Linked_list()
 # first_node.append("12")
 # first_node.append("13")
