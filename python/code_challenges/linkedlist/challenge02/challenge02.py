@@ -49,34 +49,42 @@ class Linked_list:
             current=current.next
         array.append(current.value)
         return array
-    # def delete_node(self,node):
-    #     """
-    #     this function for deleting a node 
-    #     """
-    #     node.value=node.next.value
-    #     node.next=node.next.next
-    
+ 
 
-
+   
+            
+def find_middle_node(head):
+        """
+        this function is getting the nodes after the middle
+        """
+        current=head
+        counter=1
+        nod=current
+        array=[]
+        while nod.next!=None:
+            nod=nod.next
+            counter+=1
+        mid=counter//2
+        i=0
         
+        
+        while i<mid:
+           
+            current=current.next
+            i+=1
+        while current!=None:
+            array.append(current.value)
+            current=current.next
+        return array
+                       
+
+
 def delete_node(node):
         """
         this function for deleting a node 
         """
         node.value=node.next.value
         node.next=node.next.next
-# first_node=Linked_list()
-# first_node.append("12")
-# first_node.append("13")
-# first_node.append("14")
-# first_node.append("15")
-# first_node.append("16")
-# node=first_node.get_node("13")
-# list_of_nodes_values=first_node.transfer_to_list()
-# print(list_of_nodes_values)
-# first_node.delete_node(node)
-# print(first_node.transfer_to_list())
 
 
-if __name__=="__main__":
-    pass
+
