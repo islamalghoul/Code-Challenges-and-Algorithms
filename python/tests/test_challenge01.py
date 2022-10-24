@@ -1,6 +1,6 @@
 # Write your test here
 import pytest
-from challenge01 import Node,Linked_list,delete_node
+from code_challenges.linkedlist.challenge01.challenge01 import Node,Linked_list,delete_node
 
 def test_delete():
     first_node=Linked_list()
