@@ -10,8 +10,11 @@ class Stack:
     def __init__(self):
         self.top = None
         self.size = 0
-        
+
     def push(self,value):
+        """
+        this function for pushing in the stack
+        """
         node = Node(value)
         if self.top:
             node.next = self.top
@@ -19,6 +22,9 @@ class Stack:
         self.size += 1
 
     def pop(self):
+        """
+        this function for poping in the stack
+        """
         if self.top:
             temp = self.top
             self.top = self.top.next
@@ -28,18 +34,26 @@ class Stack:
             return("This stack is empty")
     
     def peek(self):
+        """
+        this function for getting the last value pushed in the stack
+        """
         if self.top:
             return self.top.value
         else:
             return("This stack is empty")
 
     def is_empty(self):
+        """
+        this function makes the size empty
+        """
         return self.size == 0
 
     def get_size(self):
+        """
+        this function return the size of the stack
+        """
         return self.size
-    def len(self):
-        return self.size
+
 
 def isValid(s):
     """
