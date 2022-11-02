@@ -1,5 +1,5 @@
 Here we have the whiteboarding img 
 
-![WhiteBoardingImg](../../../assets/stack2.png)
+![WhiteBoardingImg](../../../assets/stackch2.png)
 
 run pytest for testing  
