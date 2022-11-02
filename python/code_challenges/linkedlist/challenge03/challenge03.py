@@ -1,4 +1,7 @@
 # Write here the code challenge solution
+from contextlib import nullcontext
+
+
 class Node :
     """
     this class for create node
@@ -49,6 +52,21 @@ class Linked_list:
             current=current.next
         array.append(current.value)
         return array
+    def reverse(self):
+        """
+        []
+        """
+        prev=None
+        next=self.head.next
+        current=self.head
+        while current !=None:
+            current.next=prev
+            prev=current
+            current=next
+            if next !=None:
+                next=next.next
+        self.head=prev
+
  
 
    
@@ -130,6 +148,11 @@ def removeNthFromEnd(head, n):
         return head
 
 
+        
+    
+        
+
+
 # first_node=Linked_list()
 # first_node.append("12")
 # first_node.append("13")
@@ -137,7 +160,8 @@ def removeNthFromEnd(head, n):
 # first_node.append("15")
 # first_node.append("16")
 # node=first_node.get_node("12")
-# removeNthFromEnd(node,4)
+# first_node.reverse()
 # print(first_node.transfer_to_list())
 
 
+l
