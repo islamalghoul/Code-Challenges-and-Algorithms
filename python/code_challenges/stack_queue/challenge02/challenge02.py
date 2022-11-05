@@ -73,7 +73,7 @@ def isValid(s):
         if ch in opening:
             arr.push(ch)
         else:
-            if arr.len()==0:
+            if arr.get_size()==0:
                 return False
             str=arr.pop()
 
@@ -81,6 +81,6 @@ def isValid(s):
                 continue 
             else:
                 return False
-    if arr.len()!=0:
+    if arr.get_size()!=0:
         return False
     return True
