@@ -1,6 +1,8 @@
-Here we have the whiteboarding img 
+Here we have the whiteboarding images
 
-![WhiteBoardingImg](../../../assets/linkedlist3.png)
+![WhiteBoardingImg](../../../assets/tree1.png)
+![WhiteBoardingImg](../../../assets/vis.png)
+
 
 run pytest for testing 
 i worked with mohammad alfiomy

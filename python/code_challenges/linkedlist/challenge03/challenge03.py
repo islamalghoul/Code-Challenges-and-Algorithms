@@ -164,4 +164,3 @@ def removeNthFromEnd(head, n):
 # print(first_node.transfer_to_list())
 
 
-l
