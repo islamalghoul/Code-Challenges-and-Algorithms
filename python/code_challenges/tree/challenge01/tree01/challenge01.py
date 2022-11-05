@@ -13,6 +13,9 @@ class Tree:
         self.queue=[]
         self.root=None
     def insert(self,value):
+        """
+        this function for insert the nodes to make binary search tree
+        """
         node= Node(value)
         if self.root==None:
             self.root=node
@@ -32,6 +35,9 @@ class Tree:
                     return self.root
                 current=current.right
     def lookup(self,value):
+        """
+        this function for searching in the tree
+        """
         if self.root==None:
             return "empty Tree"
         if value ==self.root.value:
@@ -46,21 +52,24 @@ class Tree:
                 return current
         return "we dont have node matching the value"
     def pre_order(self,current,list=[]):
+        """
+        return list that have the values of the tree in preorder way
+        """
         list.append(current.value)
         if current.left!=None:
             self.pre_order(current.left,list)
         if current.right!=None:
             self.pre_order(current.right,list)
         return list
-    def get_left_right(self,number,array):
-        left_arr=[]
-        right_arr=[]
-        for i in range(len(array)):
-          if array[i]==number:
-             left_arr=array[0:i]
-             right_arr=array[i+1:]
-             break
-        return [left_arr,right_arr]
+    # def get_left_right(self,number,array):
+    #     left_arr=[]
+    #     right_arr=[]
+    #     for i in range(len(array)):
+    #       if array[i]==number:
+    #          left_arr=array[0:i]
+    #          right_arr=array[i+1:]
+    #          break
+    #     return [left_arr,right_arr]
     # def tree_construct_BT(self,preorder,inorder):
     #     self.root=None
     #     left_arr=[]
@@ -81,6 +90,9 @@ class Tree:
     #             break
     #         i+=1
     def tree_construct_BT(self, preorder, inorder):
+        """
+        this function takes tow arrays and return the tree that can be implemented by them
+        """
         if inorder:
             INDEX = inorder.index(preorder.pop(0))
             root = Node(inorder[INDEX])
@@ -89,6 +101,9 @@ class Tree:
             
             return root
     def BFS(self):
+        """
+        this fucation is returning array that read the values of the tree in BFS way
+        """
         tree=[]
         if not self.root:
             return 'Empty tree'
