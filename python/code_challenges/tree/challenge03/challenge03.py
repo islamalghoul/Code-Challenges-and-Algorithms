@@ -10,6 +10,7 @@ class Node:
 class Tree:
     def  __init__(self):
         self.root=None
+        self.queue=[]
         
     def insert(self,value):
         """
@@ -50,6 +51,25 @@ class Tree:
             elif current.value==value:
                 return current
         return "we dont have node matching the value"
+    def BFS(self):
+        '''
+        this method to print the values of nodes by Breadth First Search
+        input: None
+        output: type:list
+        '''
+        tree=[]
+        if not self.root:
+            return 'Empty tree'
+        node= self.root
+        self.queue.append(node)
+        while self.queue:
+            node= self.queue.pop(0)
+            tree.append(node.value)
+            if node.left != None:
+                self.queue.append(node.left)
+            if node.right != None:
+                self.queue.append(node.right)
+        return tree
     def pre_order(self,current,list=[]):
         """
         return list that have the values of the tree in preorder way
@@ -78,4 +98,4 @@ class Tree:
         # till the end
         node.right = self.sortedArrayToBST(nums[mid+1:])
         return node
-        
+
