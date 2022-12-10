@@ -61,6 +61,28 @@ class Tree:
         if current.right!=None:
             self.pre_order(current.right,list)
         return list
+
+    def in_order(self,current,list=[]):
+        if current.left:
+            self.in_order(current.left,list)
+        list.append(current.value)
+        if current.right:
+            self.in_order(current.right,list)
+        return list
+    # def BFS(self,root):
+    #     current= root
+    #     array=[]
+    #     queue=[]
+    #     queue.append(current)
+    #     while queue:
+    #         current=queue.pop(0)
+    #         array.append(current.value)
+    #         if current.left:
+    #             queue.append(current.left)
+    #         if current.right:
+    #             queue.append(current.right)
+
+    #     return array
     # def get_left_right(self,number,array):
     #     left_arr=[]
     #     right_arr=[]
@@ -117,15 +139,37 @@ class Tree:
             if node.right != None:
                 self.queue.append(node.right)
         return tree
+    # def findTarget(self, root, k ):
+    #     obj={}
+    #     current=root
+        
+    #     queue=[root]
+    #     while queue:
+    #         current=queue.pop(0)
+    #         a=k-current.value
+    #         if current.value in obj:
+    #             return True
+    #         else:
+    #             obj[a]=a
+                
+    #         if current.left:
+    #             queue.append(current.left)
+    #         if current.right:
+    #             queue.append(current.right)
+    #         print(obj)
+    #     return False
    
     
 
             
             
 
-# tree1=Tree()
+tree1=Tree()
 # tree1.root=tree1.tree_construct_BT([1,2,4,8,9,10,11,5,3,6,7],[8,4,10,9,11,2,5,1,6,3,7])
-# print(tree1.BFS())
+list=[5,3,6,2,4,7]
+for i in list:  
+    tree1.insert(i)
+# print(tree1.findTarget(tree1.root,9))
 
 
 
